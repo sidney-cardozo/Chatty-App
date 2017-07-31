@@ -9,15 +9,16 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      currentUser: {name: "Bob"}, // optional. if currentUser is not defined, it means the user is Anonymous
-      messages: [
-      ]
+      currentUser: {name: "Bob", colour: "red"}, // optional. if currentUser is not defined, it means the user is Anonymous
+      messages: [],
+      numberOfUsers: 1
     };
   }
 
   componentDidMount(){
     this.WebSockets = new WebSocket("ws://localhost:3001");
     console.log("Connected to server");
+    // Adding switches to categorize the type of incoming msg to render
     this.WebSockets.onmessage =  (event) => {
       let newMsg = JSON.parse(event.data)
       switch(newMsg.type){
@@ -30,6 +31,10 @@ class App extends Component {
           let notif = this.state.messages.concat(newMsg)
           this.setState({messages: notif})
           break;
+
+        case "userCountUpdate":
+          this.setState({numberOfUsers: newMsg.numberOfUsers})
+          break;
         default:
           throw new Error("Unknown event type " + newMsg.type);
       }
@@ -37,6 +42,7 @@ class App extends Component {
   }
 
   setNewUser(event){
+    // Using the "onBlur" event to set a new username
     let oldName = this.state.currentUser.name
     let newName = event.target.value
     if( oldName != newName){
@@ -46,7 +52,7 @@ class App extends Component {
       }
       let stringifiedNotification=JSON.stringify(notification)
       this.WebSockets.send(stringifiedNotification)
-      this.state.currentUser.name = newName
+      this.setState.currentUser.name = newName
     }
 
   }
@@ -58,14 +64,8 @@ class App extends Component {
         username: this.state.currentUser.name,
         content: event.target.value
       }
-      // Add a new message to the list of messages in the data store
-      // const msgs = this.state.messages.concat(incomingMsg)
-
       typedMsg = JSON.stringify(typedMsg);
       this.WebSockets.send(typedMsg);
-      // Update the state of the app component.
-      // Calling setState will trigger a call to render() in App and all child components.
-      // this.setState({messages: msgs})
       event.target.value = ""
     }
   };
@@ -73,7 +73,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar numberOfUsers={this.state.numberOfUsers} />
         <MessageList messages={this.state.messages} />
         <ChatBar currentUser={this.state.currentUser} setNewUser={this.setNewUser.bind(this)} setNewMessage={this.setNewMessage.bind(this)}/>
       </div>
