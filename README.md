@@ -1,21 +1,15 @@
-React Boilerplate
+Chatty - APP
 =====================
 
-A minimal and light dev environment for ReactJS.
+Built from a minimal and light dev environment for ReactJS. This a SPA chat app. 
 
 ### Usage
 
-Clone the boilerplate and create your own git repo.
+Clone the app and create your own git repo.
 
-```
-git clone git@github.com:lighthouse-labs/react-simple-boilerplate.git
-cd react-simple-boilerplate
-git remote rm origin
-git remote add origin [YOUR NEW REPOSITORY]
-# Manually update your package.json file
-```
+Install the dependencies and start the app server.
 
-Install the dependencies and start the server.
+You will also need to clone this repository https://github.com/sidney-cardozo/Chatty-Server which contains the server with whom the app is going to communicate with. start both servers and open it on the browser using the link below.
 
 ```
 npm install
@@ -29,13 +23,6 @@ You can store static files like images, fonts, etc in the `build` folder.
 
 For example, if you copy a file called my_image.png into the build folder you can access it using `http://localhost:3000/build/my_image.png`.
 
-### Linting
-
-This boilerplate project includes React ESLint configuration.
-
-```
-npm run lint
-```
 
 ### Dependencies
 
