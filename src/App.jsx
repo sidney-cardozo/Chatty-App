@@ -52,7 +52,7 @@ class App extends Component {
       }
       let stringifiedNotification=JSON.stringify(notification)
       this.WebSockets.send(stringifiedNotification)
-      this.setState.currentUser.name = newName
+      this.setState({currentUser: {name : newName}})
     }
 
   }
