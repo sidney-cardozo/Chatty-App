@@ -16,6 +16,11 @@ Broadcasts messages when users change their name
 !["Broadcast messages"](https://github.com/sidney-cardozo/Chatty-App/blob/master/screenshots/Selection_003.png)
 
 
+In the works:
+User-Login integration
+gif pics being displayed
+Colour coded text for each user
+
 
 ### Usage
 
