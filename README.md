@@ -3,15 +3,17 @@ Chatty - APP
 
 This a chat SPA. Built from a minimal and light dev environment for ReactJS.
 Overview Look
-!["Overview of the app"](https://github.com/sidney-cardozo/PreReq-Simple/blob/master/screenshots/HelloReact.png)
+!["Overview"](https://github.com/sidney-cardozo/Chatty-App/blob/master/screenshots/HelloReact.png)
 
 Some of the current features are :
 
 Total Users connected to the server
-!["Current users"](https://github.com/sidney-cardozo/PreReq-Simple/blob/master/screenshots/Selection_002.png)
+
+!["Current users"](https://github.com/sidney-cardozo/Chatty-App/blob/master/screenshots/Selection_002.png)
 
 Broadcasts messages when users change their name
-!["Broadcast messages"](https://github.com/sidney-cardozo/PreReq-Simple/blob/master/screenshots/Selection_003.png)
+
+!["Broadcast messages"](https://github.com/sidney-cardozo/Chatty-App/blob/master/screenshots/Selection_003.png)
 
 
 
