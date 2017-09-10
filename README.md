@@ -17,9 +17,9 @@ Broadcasts messages when users change their name
 
 
 In the works:
-User-Login integration
-gif pics being displayed
-Colour coded text for each user
+User-Login integration.
+gif pics being displayed.
+Colour coded text for each user.
 
 
 ### Usage
