@@ -1,7 +1,7 @@
 Chatty - APP
 =====================
 
-This a chat SPA. Built from a minimal and light dev environment for ReactJS.
+This is a chat SPA. Built from a minimal and light dev environment for ReactJS.
 Overview Look
 !["Overview"](https://github.com/sidney-cardozo/Chatty-App/blob/master/screenshots/HelloReact.png)
 
